@@ -6,7 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "duck-duck-scrape": "^2.4.0",
+    "duck-duck-scrape": "latest",
     "express": "^4.18.0"
   },
   "engines": {
