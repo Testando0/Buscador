@@ -1,16 +1,14 @@
-// server.js
 const express = require('express');
 const { performWebSearch, formatResultsForModel } = require('./lib/webSearch');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Endpoint de health check (obrigatório para o Koyeb)
+// essa coisa tá coisada para o Render, te vira pra entender.
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Endpoint de busca
 app.get('/search', async (req, res) => {
   try {
     const query = req.query.q || '';
